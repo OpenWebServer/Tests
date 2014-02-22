@@ -12,7 +12,23 @@ if (isset($_COOKIE['MyLoginPage'])) {
 
 
 
+<?php
+// start of  Control panel
+print "<h1>OpenWebServer</h1>";
+print "<h2>Monitor</h2>";
+print "Monoitor Ram/Swap";
+header("Content-type: text/plain");
 
+// tell php to automatically flush after every output
+// including lines of output produced by shell commands
+disable_ob();
+
+$command = 'pa aux';
+$proc = system($command);
+print #proc  
+
+// end of Control Panel
+?>
 
 
 
